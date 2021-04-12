@@ -18,7 +18,7 @@ import java.net.URL;
 import java.net.UnknownHostException;
 
 /**
- * Ejercicio 200: Crear un cliente HTTP basado en sockets.
+ * Crear un cliente HTTP basado en sockets.
  *
  * @author ydieh
  */
