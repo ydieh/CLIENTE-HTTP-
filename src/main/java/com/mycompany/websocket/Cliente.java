@@ -20,13 +20,13 @@ import java.net.UnknownHostException;
 /**
  * Ejercicio 200: Crear un cliente HTTP basado en sockets.
  *
- * @author John Ortiz Ordoñez
+ * @author ydieh
  */
 public class Cliente {
 
     public static void main(String[] args) {
         
-        final String DIRECCION = "https://cvfcpn.umsa.bo/";
+        final String DIRECCION = "https://google.com/";
         
         URL url;
         
@@ -45,12 +45,12 @@ public class Cliente {
            PrintStream out = new PrintStream( socket.getOutputStream() );
             BufferedReader in = new BufferedReader( new InputStreamReader( socket.getInputStream() ) );
 
-            // Follow the HTTP protocol of GET <path> HTTP/1.0 followed by an empty line
+           
             out.println( "GET " + url.getPath() + " HTTP/1.0" );
             out.println();
             
 
-            // Read data from the server until we finish reading the document
+            // Leemos los datos
             String line = in.readLine();
             while( line != null )
             {
@@ -58,7 +58,7 @@ public class Cliente {
                 line = in.readLine();
             }
 
-            // Close our streams
+            
             in.close();
             out.close();
             socket.close();
